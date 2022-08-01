@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --font-family: 'Kumbh Sans', sans-serif;
+    --font-size: 18px;
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --main-bg: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --dark-blue: hsl(227, 10%, 46%);
+
+    --dark-grey: hsl(0, 0%, 59%);
+}
+
+body{
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+    background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-position: -300px -500px, calc(100% + 300px) calc(100% + 500px); 
+    background-repeat: no-repeat; 
+}
+
+.card{
+    background-color: white;
+    width: 27rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.card__avatar{
+    background-image: url("./images/bg-pattern-card.svg");
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.card__avatar__img{
+    position: relative;
+    border: 5px solid white;
+    border-radius: 50%;
+    bottom: -65px;
+    width: 130px;
+}
+
+.card__content{
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.card__content__name{
+    font-weight: var(--fw-700);
+    margin-right: 0.5rem;
+}
+
+.card__content__age{
+    font-size: 1.5rem;
+}
+
+.card__content__city{
+    margin-top: 0.3rem;
+}
+
+.card__content__stats__stat--text{
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.card__content__age,
+.card__content__stats__stat--text,
+.card__content__city{
+    color: var(--dark-grey);
+}
+
+.card__content__age,
+.card__content__name{
+    display: inline;
+}
+
+.card__content__name,
+.card__content__stats__stat--number{
+    color: var(--very-dark-blue);
+    font-size: 1.5rem;
+}
+
+.card__content__stats{
+    margin-top: 2rem;
+    border-top: 1px solid rgb(232, 232, 232);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem 2rem 3rem;
+}
+
+@media (max-width: 1200px){
+    main{
+        background-position: -400px -500px, calc(100% + 400px) calc(100% + 500px); 
+    }
+}
+@media (max-width: 900px){
+    main{
+        background-position: -500px -600px, calc(100% + 500px) calc(100% + 600px); 
+    }
+}
+@media (max-width: 600px){
+    main{
+        background-position: -600px -600px, calc(100% + 600px) calc(100% + 600px); 
+    }
+}
+@media (max-width: 400px){
+    main{
+        background-position: -700px -600px, calc(100% + 700px) calc(100% + 600px); 
+    }
+}
+
+
+
