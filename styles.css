@@ -93,7 +93,9 @@ main{
     font-size: 1.5rem;
 }
 
-.card__content__stats{
+.card__content__stats {
+    /* display: flex; */
+    flex-wrap: wrap;
     margin-top: 2rem;
     border-top: 1px solid rgb(232, 232, 232);
     display: flex;
@@ -120,6 +122,12 @@ main{
 @media (max-width: 400px){
     main{
         background-position: -700px -600px, calc(100% + 700px) calc(100% + 600px); 
+    }
+}
+
+@media (max-width: 280px){ 
+    .card__content__stats {
+        flex-direction: column;
     }
 }
 
